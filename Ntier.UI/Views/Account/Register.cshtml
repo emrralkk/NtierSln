@@ -1,0 +1,90 @@
+﻿@model RegisterViewModel
+@{
+    ViewData["Title"] = "Register";
+}
+
+<div class="container">
+    <div class="row">
+        <div class="col-lg-10 col-xl-9 mx-auto">
+            <div class="card flex-row my-5 border-0 shadow rounded-3 overflow-hidden">
+                <div class="card-img-left d-none d-md-flex">
+                    <!-- Background image for card set in CSS! -->
+                </div>
+                <div class="card-body p-4 p-sm-5">
+                    <h5 class="card-title text-center mb-5 fw-light fs-5">Sign Up</h5>
+                    <form method="post" asp-action="Register">
+                        <div class="form-floating mb-3">
+                            <input asp-for="Name" type="text" class="form-control" id="floatingInputUsername" required autofocus>
+                            <label asp-for="Name" for="floatingInputUsername">Name</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input asp-for="Surname" type="text" class="form-control" id="floatingInputUsername"  required autofocus>
+                            <label asp-for="Surname" for="floatingInputUsername">Surname</label>
+                        </div>
+                        <div class="form-floating mb-3">
+                            <input asp-for="Username" type="text" class="form-control" id="floatingInputUsername" required autofocus>
+                            <label asp-for="Username" for="floatingInputUsername">Username</label>
+                        </div>
+
+                        <div class="form-floating mb-3">
+                            <input asp-for="Email" type="email" class="form-control" id="floatingInputEmail">
+                            <label asp-for="Email" for="floatingInputEmail">Email address</label>
+                        </div>
+
+                        <hr>
+
+                        <div class="form-floating mb-3">
+                            <input asp-for="Password" type="password" class="form-control" id="floatingPassword">
+                            <label asp-for="Password" for="floatingPassword">Password</label>
+                        </div>
+
+                        <div class="form-floating mb-3">
+                            <input asp-for="ConfirmPassword" type="password" class="form-control" id="floatingPasswordConfirm">
+                            <label asp-for="ConfirmPassword" for="floatingPasswordConfirm">Confirm Password</label>
+                        </div>
+
+                        <div class="d-grid mb-2">
+                            <button class="btn btn-lg btn-primary btn-login fw-bold text-uppercase" type="submit">Sign Up</button>
+                        </div>
+
+                        <a class="d-block text-center mt-2 small" asp-action="Login">Have an account? Sign In</a>
+
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<style>
+    body {
+        background: #007bff;
+        background: linear-gradient(to right, #0062E6, #33AEFF);
+    }
+
+    .card-img-left {
+        width: 45%;
+        /* Link to your background image using in the property below! */
+        background: scroll center url('https://source.unsplash.com/WEQbe2jBg40/414x512');
+        background-size: cover;
+    }
+
+    .btn-login {
+        font-size: 0.9rem;
+        letter-spacing: 0.05rem;
+        padding: 0.75rem 1rem;
+    }
+
+    .btn-google {
+        color: white !important;
+        background-color: #ea4335;
+    }
+
+    .btn-facebook {
+        color: white !important;
+        background-color: #3b5998;
+    }
+
+</style>
+
